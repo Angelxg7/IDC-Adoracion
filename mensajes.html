@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IDC Adoración</title>
+	<link rel="stylesheet" type="text/css" href="mensajes.css">
+	<link rel="shortcut icon" href="imgs/keyboard+keyboard+piano+music+piano+piano+keyboard+yamaha-1320186609161102566.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header class="nav">
+		<div class="nav__item" onclick="window.open('index.html','_self')"><b>Inicio</b></div>
+		<div class="nav__item" onclick="window.open('canciones.html','_self')"><b>Canciones</b></div>
+		<div class="nav__item" onclick="window.open('lecciones.html','_self')"><b>Lecciones</b></div>
+		<div class="nav__item" onclick="window.open('galeria.html','_self')"><b>Galería</b></div>
+		<div class="nav__item" onclick="window.open('mensajes.html','_self')"><b>Contacto</b></div>
+		<div class="nav__item" onclick="window.open('nosotros.html','_self')"><b>Nosotros</b></div>
+		<b></b>
+	</header>
+	<div class="flex-container">
+		<form class="form" id="form">
+			<div class="form__section">
+				<input type="text" class="form__input" id="nombre" name="nombre" placeholder="Nombre">
+			</div>
+			<div class="form__section">
+				<input type="text" class="form__input" id="asunto" name="asunto" placeholder="Asunto">
+			</div>
+			<div class="form__section">
+				<input type="email" class="form__input" id="email" name="email" placeholder="Mail">
+			</div>			
+			<div class="form__section">
+				<textarea class="form__input" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+			</div>
+			<div class="form__section">
+				<input type="submit" class="form__input">
+			</div>
+		</form>
+		<div class="form-img">
+			<img src="imgs/mailto.png">
+		</div>
+	</div>
+	<div class="mensaje">
+		<p>Deja tu mensaje, saludo o sugerencia!</p>
+	</div>
+	<a href="mailto:gabrielmartincornejo@gmail.com" id="trucazo" target="_blank">mail</a>
+	<script>
+		const $form = document.querySelector('#form')
+		const $buttonMailto = document.querySelector('#trucazo')
+
+		$form.addEventListener('submit', handleSubmit)
+
+		function handleSubmit(event) {
+			event.preventDefault()
+			const form = new FormData(this)
+
+			$buttonMailto.setAttribute('href', `mailto:gabrielmartincornejo@gmail.com?subject=${form.get('nombre')} ${form.get('asunto')} ${form.get('email')}&body=${form.get('mensaje')}`)
+			$buttonMailto.click()
+		}
+	</script>
+</body>
+</html>

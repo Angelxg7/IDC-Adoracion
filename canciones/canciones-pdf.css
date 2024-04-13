@@ -1,0 +1,89 @@
+
+header {
+	margin: -10px -10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 15vh;
+	background: #fc4;
+	justify-content: space-evenly;
+	position: fixed;
+	z-index: 10;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background-image: url(fondo2.png);
+}
+
+.nav {
+	background-image: url(navfondo.png);
+}
+
+.nav__item {
+	background: #ddd;
+	width: 20%;
+	height: 30%;
+	align-self: center;
+	text-align: center;
+	padding-left: 10px;
+	font-family: oswald;
+	font-size: 24px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.nav__item:hover {
+	background: #777;
+	color: #fff;
+}
+
+.pdf-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15vh auto;
+	width: 100vw;
+	height: 120vh;
+}
+
+p {
+	font-size: 30px;
+	margin: 5px;
+}
+
+.btn-descarga {
+	width: 50px;
+	object-fit: cover;
+}
+
+.btn-descarga img {
+	width: 50px;
+	height: 50px;
+}
+
+.pre-item {
+	width: 100%;
+	background:#fff;
+	font-size: 24px;
+	padding: 120px;
+}
+
+@media screen and (max-width: 640px){
+.nav__item {
+	font-size: 16px;
+	text-align: left;
+}
+
+p {
+	font-size: 18px;
+}
+
+.pre-item {
+	width: 100%;
+	font-size: 12px;
+	padding: 5px;
+}
+
+}

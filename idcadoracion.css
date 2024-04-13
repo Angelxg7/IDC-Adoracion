@@ -1,0 +1,171 @@
+
+header {
+	margin: -10px -10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 15vh;
+	background: #fc4;
+	justify-content: space-evenly;
+	position: fixed;
+	z-index: 10;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background-image: url(imgs/Fondo1.png);
+	background-size: cover;
+}
+
+.nav {
+	background-image: url(imgs/navfondo.png);
+}
+
+.nav__item {
+	background: #ddd;
+	width: 20%;
+	height: 30%;
+	align-self: center;
+	text-align: center;
+	padding-left: 10px;
+	font-family: oswald;
+	font-size: 24px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.nav__item:hover {
+	background: #777;
+	color: #fff;
+}
+
+.titulo {
+	margin-top: 20vh;
+	height: 120px;
+	width: 100%;
+	font-size: 64px;
+	text-align: center;
+	color: #fff;
+}
+
+.container-slider {
+	margin: auto;
+	width: 90%;
+	max-width: 900px;
+	overflow: hidden;
+	box-shadow: 0 0 0 10px #000,
+				0 15px 50px;
+	position: relative;
+}
+
+.slider {
+	display: flex;
+	width: 400%;
+	height: 100%;
+	margin-left: -100%;
+}
+
+.slider__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider__btn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	font-weight: bold;
+	font-family: monospace;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider__btn:hover {
+	background: #fff;
+}
+
+.slider__btn--left {
+	left: 10px;
+}
+
+.slider__btn--right {
+	right: 10px;
+}
+
+.main__youtube {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	margin: 10vh 0 0 -2%;
+	padding: 20px 0;
+	font-size: 24px;
+	justify-content: center;
+}
+
+.main__youtube h2 {
+	margin: 30vh auto 0 auto;
+	padding: 20px 150px;
+	width: 100vw;
+}
+
+.video {
+	width: 100vw;
+	background-image: url(imgs/fondo2.png);
+	justify-content: center;
+}
+
+.video iframe {
+	width: 800px;
+	height: 480px;
+}
+
+.texto {
+	background-image: url(imgs/fondo2.png);
+	font-size: 32px;
+}
+
+@media screen and (max-width: 640px){
+.nav__item {
+	font-size: 16px;
+	text-align: left;
+}
+
+.titulo {
+	font-size: 42px;
+	margin: 18vh 0 -5vh 0;
+}
+
+.main__youtube {
+	background-image: url(imgs/fondo2.png);
+	width: 100vw;
+	margin-left: -2%;
+	font-size: 14px;
+	padding: 0;
+}
+
+.main__youtube h2 {
+	width: 95vw;
+	padding: 0 10px;
+	margin: 20px auto;
+}
+
+.video iframe {
+	width: 260px;
+	height: 160px;
+	padding: 0;
+}
+
+.texto {
+	font-size: 20px;
+}
+
+}

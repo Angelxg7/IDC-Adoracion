@@ -1,0 +1,100 @@
+
+header {
+	margin: -10px -10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 15vh;
+	background: #fc4;
+	justify-content: space-evenly;
+	position: fixed;
+	z-index: 10;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background-image: url(imgs/fondo2.png);
+}
+
+.nav {
+	background-image: url(imgs/navfondo.png);
+}
+
+.nav__item {
+	background: #ddd;
+	width: 20%;
+	height: 30%;
+	align-self: center;
+	text-align: center;
+	padding-left: 10px;
+	font-family: oswald;
+	font-size: 24px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.nav__item:hover {
+	background: #777;
+	color: #fff;
+}
+
+.grid-container {
+	margin: 20vh auto 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3,minmax(200px, 400px));
+	grid-template-rows: repeat(3,minmax(200px, 400px));
+	grid-gap: 40px;
+}
+
+.grid-box {
+	height: 90%;
+	width: 90%;
+	object-fit: cover;
+	background: #fff;
+	border-radius: 10%;
+	border: 10px double #000;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.grid-box:hover {
+	color: #23f7f7;
+	border: 10px double #23f7f7;
+}
+
+img {
+	height: 60%;
+	margin: 10% 25% 0 20%;
+}
+
+p {
+	margin: 10% 25% 0 30%;
+}
+
+@media screen and (max-width: 640px){
+.nav__item {
+	font-size: 16px;
+	text-align: left;
+}
+
+.grid-container {
+	grid-template-columns: repeat(2,minmax(100px, 200px));
+	grid-template-rows: repeat(4,minmax(100px, 200px));
+}
+
+.grid-box img{
+	height: 60%;
+	width: 90%;
+	margin: 10% 25% 0 2%;
+}
+
+img {
+	margin: 10% 25% 0 10%;
+}
+
+p {
+	font-size: 20px;
+	margin: 10% 25% 0 20%;
+}

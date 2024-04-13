@@ -1,0 +1,120 @@
+
+header {
+	margin: -10px -10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 15vh;
+	background: #fc4;
+	justify-content: space-evenly;
+	position: fixed;
+	z-index: 10;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background-image: url(imgs/fondo2.png);
+}
+
+.nav {
+	background-image: url(imgs/navfondo.png);
+}
+
+.nav__item {
+	background: #ddd;
+	width: 20%;
+	height: 30%;
+	align-self: center;
+	text-align: center;
+	padding-left: 10px;
+	font-family: oswald;
+	font-size: 24px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.nav__item:hover {
+	background: #777;
+	color: #fff;
+}
+
+.songs-container {
+	display: block;
+	margin-top: 15vh;
+	width: 100vw;
+	height: 100%;
+}
+
+.song {
+	background: #fff;
+	font-size: 24px;
+	width: 100%;
+	border: 2px solid #000;
+}
+
+.song:hover {
+	filter: invert(1);
+	cursor: pointer;
+}
+
+.nav-bar {
+	background: #e38646;
+	padding: 20px;
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.menu, .submenu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu {
+	background: #555;
+	width: 100%;
+	transition: all 0.5s;
+}
+
+.menu__link {
+	display: block;
+	padding: 20px;
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.menu__link:hover {
+	background: #444;
+}
+
+.submenu .menu__link:hover {
+	background: #222;
+}
+
+.submenu {
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+.submenu .menu__link {
+	background: #333;
+	padding-left: 40px;
+}
+
+@media screen and (max-width: 640px){
+.nav__item {
+	font-size: 16px;
+	text-align: left;
+}
+
+.song {
+	width: 95%;
+	font-size: 18px;
+}
